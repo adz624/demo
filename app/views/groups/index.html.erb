@@ -1,0 +1,33 @@
+<h1>index page</h1>
+
+<%= link_to "新增",new_group_path%>
+<table>
+<tr>
+	<td>Title</td>
+	<td>Description</td>
+	<td>Action</td>
+</tr>
+
+<%@group.each do |group|%>
+	<tr>
+	<td><%=group.title%> </td>
+	<td><%=group[:description]%></td>
+	<td>
+		<!-- Show Link -->
+		<%= link_to "show", group_path(group) %>
+		<%= link_to "show", group_path(group.id) %>
+		<%= link_to "show", group %>
+
+		<!-- Edit Link -->
+		<%= link_to "修改", edit_group_path(group) %>
+
+		<%= link_to "修改", edit_group_path(group.id) %>
+
+		<!-- Delete Link -->
+		<%= link_to "刪除", group_path(group.id), :method=>'delete',:confirm=>'are you sure!' %>
+	</td>
+</tr>
+
+<%end%>
+
+</table>

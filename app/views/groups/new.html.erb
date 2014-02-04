@@ -1,0 +1,19 @@
+<h1>new page</h1>
+
+<%= form_for @group do |f| %>
+
+
+<% if @group.errors.any?%>
+	<h4>Errors</h4>
+<%end%>
+
+
+Title:
+<%= f.text_field :title %>
+<br>
+Description:
+<%= f.text_field :description%>
+<br>
+<%=f.submit 'save'%>
+
+<%end%>
