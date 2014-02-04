@@ -1,6 +1,8 @@
 Jimmy::Application.routes.draw do
 
 
+  resources :posts
+
   root :to => "groups#index"
 
   devise_for :users

@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  before_action :authenticate_user!, only: [:show, :info]
   before_action :set_group, only: [:info, :show, :destroy, :update, :edit]
 
   def info
