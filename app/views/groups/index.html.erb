@@ -14,19 +14,19 @@
 	<td><%=group[:description]%></td>
 	<td>
     <!-- Info Link -->
-    <%= link_to "info", info_group_path(group) %>
+    <%= link_to "Info訊息", info_group_path(group), class: 'btn btn-primary' %>
 		<!-- Show Link -->
-		<%= link_to "show", group_path(group) %>
-		<%= link_to "show", group_path(group.id) %>
-		<%= link_to "show", group %>
+		<%= link_to "show1", group_path(group), class: 'btn btn-info' %>
+		<%= link_to "show2", group_path(group.id), class: 'btn btn-info' %>
+		<%= link_to "show3", group, class: 'btn btn-info' %>
 
 		<!-- Edit Link -->
-		<%= link_to "修改", edit_group_path(group) %>
+		<%= link_to "修改1", edit_group_path(group), class: 'btn btn-warning' %>
 
-		<%= link_to "修改", edit_group_path(group.id) %>
+		<%= link_to "修改2", edit_group_path(group.id), class: 'btn btn-warning' %>
 
 		<!-- Delete Link -->
-		<%= link_to "刪除", group_path(group.id), :method=>'delete',:confirm=>'are you sure!' %>
+		<%= link_to "刪除", group_path(group.id), :method => 'delete', :confirm => 'are you sure!', class: 'btn btn-danger' %>
 	</td>
 </tr>
 
