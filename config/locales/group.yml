@@ -1,0 +1,6 @@
+zh-TW:
+  simple_form:
+    labels:
+      group:
+        title: '標題'
+        description: '內文'

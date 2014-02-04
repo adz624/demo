@@ -1,7 +1,7 @@
 <h1>index page</h1>
 
 <%= link_to "新增",new_group_path%>
-<table>
+<table class="table">
 <tr>
 	<td>Title</td>
 	<td>Description</td>
@@ -13,6 +13,8 @@
 	<td><%=group.title%> </td>
 	<td><%=group[:description]%></td>
 	<td>
+    <!-- Info Link -->
+    <%= link_to "info", info_group_path(group) %>
 		<!-- Show Link -->
 		<%= link_to "show", group_path(group) %>
 		<%= link_to "show", group_path(group.id) %>

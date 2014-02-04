@@ -7,8 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if notice.present? %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
+  <% if alert.present? %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
 
-<%= yield %>
+  <div class="container">
+    <%= link_to '回首頁', root_path, class: 'btn btn-danger' %>
+    <%= link_to '登入', new_user_session_path, class: 'btn btn-danger' %>
+    <%= link_to '註冊', new_user_registration_path, class: 'btn btn-danger' %>
+    <div class="span12">
+      <%= yield %>
+    </div>
+  </div>
 
 </body>
 </html>

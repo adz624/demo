@@ -1,6 +1,24 @@
 Jimmy::Application.routes.draw do
 
-  resources :groups
+
+  root :to => "groups#index"
+
+  devise_for :users
+
+  resources :groups do
+    # GET /groups/1/info
+    # GET /groups/1/members
+    member do
+      get 'info'
+    end
+
+    # GET /groups/search
+    #
+    collection do
+      get 'search'
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
