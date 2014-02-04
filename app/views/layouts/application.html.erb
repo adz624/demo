@@ -8,10 +8,16 @@
 </head>
 <body>
   <% if notice.present? %>
-    <p class="notice"><%= notice %></p>
+    <div class="alert alert-success">
+      <strong>Notice!</strong>
+      <%= notice %>
+    </div>
   <% end %>
   <% if alert.present? %>
-    <p class="alert"><%= alert %></p>
+    <div class="alert alert-danger">
+      <strong>Alert!</strong>
+      <%= alert %>
+    </div>
   <% end %>
 
   <div class="container">
